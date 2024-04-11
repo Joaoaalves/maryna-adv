@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth !important;
+    --scroll-behavior: smooth !important;
+  }
+}
+
+.carousel {
+  scrollbar-width: auto;
+  scrollbar-color: #ecd574 #ffffff;
+}
+
+.carousel::-webkit-scrollbar {
+  width: 16px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #ecd574;
+  border-radius: 10px;
+  border: 3px solid #00000000;
+}
+
+@media only screen and (max-width: 700px) {
+  #hero:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    opacity: 0.06;
+    background-image: url('/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    -webkit-box-shadow: inset 0px 0px 80px 30px rgba(59, 46, 13, 1);
+    -moz-box-shadow: inset 0px 0px 80px 30px rgba(59, 46, 13, 1);
+    box-shadow: inset 0px 0px 80px 30px rgba(59, 46, 13, 1);
+
+  }
+
+  #sobre:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.04;
+    background-image: url('/sobre.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    border-bottom-right-radius: 60px;
+  }
+
+  #sobre {
+    border-bottom-right-radius: 60px !important;
+  }
+
+}
+
+#sobre {
+  border-bottom-right-radius: 20%;
+}
+
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+.hero {
+  height: 800px;
+}
+
+@media screen and (min-width: 1200px) {
+  .servico {
+    width: calc(33% - 20px);
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  .servico {
+    width: calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .servico {
+    width: 80%;
+  }
+}
+
+.parceiro {
+  min-height: 300px;
+}
+
+.flex.h-full.flex-col.justify-center.gap-4.p-6 {
+  padding: 0 0 5% 0;
+}
+
+/* Padding for 4k devices on all sections */
+@media screen and (min-width: 2500px) {
+
+  #hero,
+  #pilares,
+  #sobre,
+  #servicos,
+  #parceiros,
+  #contato,
+  #depoimentos,
+  #footer,
+  #navbar {
+    padding-left: 25% !important;
+    padding-right: 25% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bubble::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -16px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 12px solid;
+    border-color: white white transparent transparent;
+  }
+}
+
+
+main {
+  @apply !bg-white;
+}
+
+svg.h-6.w-6.shrink-0 {
+  color: white;
+}
+
+li {
+  padding: 8px 0;
+}
+
+li a {
+  width: 100%;
+}
